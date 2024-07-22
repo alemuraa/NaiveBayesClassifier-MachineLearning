@@ -92,12 +92,4 @@ def Predictions(final_yes, final_no):
 
 Per migliorare le prestazioni del classificatore Naive Bayes, utilizziamo la lisciatura di Laplace (additiva). Questa tecnica inserisce un fattore di lisciatura all'interno dell'equazione di probabilità per gestire le probabilità di eventi rari e migliorare la robustezza del classificatore. Il valore di lisciatura, denotato come \( a \), è specificato nella funzione `LaplaceSmoothing()`. Per la nostra implementazione, abbiamo scelto un valore di \( a = 0.85 \), per ridurre l'affidamento del classificatore sui conteggi a priori rispetto ai dati osservati.
 
-### 3.1 Funzione di Lisciatura di Laplace
 
-La funzione `LaplaceSmoothing()` applica la lisciatura di Laplace ai conteggi degli attributi per ottenere valori di probabilità più robusti.
-
-- **Funzione:** `LaplaceSmoothing()`
-- **Descrizione:** Applica la lisciatura di Laplace ai conteggi degli attributi.
-- **Parametro:** 
-  - `occurrences`: Conteggi degli attributi per le classi "Yes" e "No".
-  - `a`: Fattore di lisciatura (valore di \( a \)).
